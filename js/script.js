@@ -191,7 +191,7 @@ function insertEdges() {
 function drawGraph(graph, divId) {
 
 
-    let colorHexa = ['#FF0101', '#D7DF01', '#67934D', '#00DFD6', '#afa2ff', '#FFF01F', '#00FF00', '#FE00FE', '#FF5964', '#2E9AFE', '#F4A9A8', '#6E6F6F', '#F5FA59', '#BE81F7', '#DE7501'];
+    let colorHexa = ['#FFFFFF', '#FF0101', '#D7DF01', '#67934D', '#00DFD6', '#afa2ff', '#FFF01F', '#00FF00', '#FE00FE', '#FF5964', '#2E9AFE', '#F4A9A8', '#6E6F6F', '#F5FA59', '#BE81F7', '#DE7501'];
 
     // create an array with nodes
     let nodesData = [];
