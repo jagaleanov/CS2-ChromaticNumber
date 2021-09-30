@@ -1,0 +1,107 @@
+body{
+    background:#888888;
+}
+
+#network1,#network2 ,#network3 {
+    height: 500px;
+    border: 1px solid lightgray;
+}
+
+td {
+    font-size: 0.9em;
+    text-align: center;
+    min-width: 20px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: table-cell;
+}
+
+.tree{
+    white-space: nowrap;
+    /*font-weight: bold;*/
+    font-size: 1.3em;
+}
+
+.tree ul, .tree li {
+    margin: 0 auto; 
+    padding: 0;
+    white-space: nowrap;
+    transition: all 0.5s;
+}
+
+.tree ul {
+    padding-top: 20px; 
+    position: relative;
+}
+
+.tree li {
+    float: left; 
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 2px 0 2px;
+}
+
+/*Conectores horizontales*/
+.tree li::before, .tree li::after{
+    content: '';
+    position: absolute; 
+    top: 0; 
+    right: 50%;
+    border-top: 1px solid #000;/**/
+    width: 50%; 
+    height: 20px;
+}
+
+/*Conectores verticales*/
+.tree li::after{
+    left: 50%;
+    border-left: 1px solid #000;
+}
+
+/*Remueve conectores horizontales de elementos en los extremos*/
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+/*Remueve el conector izquierdo del primer hijo y eel derecho del ultimo hijo*/
+.tree li:first-child::before, .tree li:last-child::after{
+    border: 0 none;
+}
+
+/*A�ade el conector vertical a los ultimos nodos*/
+.tree li:last-child::before{
+    
+    border-right: 1px solid #000;
+    border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+    border-radius: 5px 0 0 0;
+}
+
+/*Conector del padre*/
+.tree ul ul::before{
+    content: '';
+    position: absolute; 
+    top: 0; 
+    left: 50%;
+    border-left: 1px solid #000;
+    width: 0; 
+    height: 20px;
+}
+
+/*Div del nodo*/
+.tree li div{
+    display: inline-block;
+    border: 1px solid #000;
+    transition: all 0.5s;
+    background: #e47600;
+    color: #fff; 
+}
+
+/*Efectos mouse over*/
+.tree li div:hover, .tree li div:hover+ul li div {
+    background: #F00; 
+    border: 1px solid #94a0b4;
+}

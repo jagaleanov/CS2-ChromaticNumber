@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Grafo - Número cromático</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--JS-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="fluid-container">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <h1 class="navbar-brand mx-4">Grafo - Número cromático</h1>
+        </nav>
+        <div class="card mx-4 mt-3">
+            <div class="card-body">
+                <h5 class="m-3">Grafo</h5>
+                <div id="network1" class="mb-4"></div>
+                <p id="chromaticNum"> </p>
+                <div>
+                    <h6>Matriz de adyacencia</h6>
+                    <table id="edgesTable" class="table table-sm table-borderless">
+                    </table>
+                    <div class="form-group">
+                        <input type="button" id="setEdgesBtn" class="btn btn-primary btn-block" value="Dibujar aristas"
+                            onclick="insertEdges()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
